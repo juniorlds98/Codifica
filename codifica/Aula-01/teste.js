@@ -1,7 +1,9 @@
 const prompt = require("prompt-sync")()
 
-let contador = -1
-let numero = 0
+let numero = Number(prompt("Escreva um número aleatório: "))
 let numeros = 0
 
-for (contador = -1; contador !== 0; )
+do {
+    numero = Number(prompt("Escreva um número aleatório [0 p/ parar]: "))
+    i++
+} while(numero ==! 0)

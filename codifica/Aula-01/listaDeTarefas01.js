@@ -178,3 +178,51 @@ for (contador = 0; contador <= 10; contador++){
 
 //13. Fazer um algoritmo para receber números decimais até que o usuário digite 0 e fazer a média aritmética desses números.
 
+const prompt = require("prompt-sync")()
+
+let contador = 0
+let numero = -1
+let numeros = 0
+
+for (numero = -1; numero !== 0; contador++){
+    numero = Number(prompt("Escreva um número aleatório [digite 0 p/ sair]: "))
+    numeros += numero
+    if (numero == 0){
+        console.log("Você escolheu:",contador,"numeros.","A soma dos números escolhidos deu:", numeros)
+        break
+    }
+}
+
+//14. Crie um programa que calcula o fatorial de um número fornecido pelo usuário utilizando um loop for ou while.
+
+let i = 1
+let linha = ""
+
+for(let fatorial = 5; fatorial > 0; fatorial--){
+    i *= fatorial 
+
+    if(fatorial > 1){
+        linha += fatorial + " x ";        
+    }else {
+        linha += fatorial + " = " + i;
+    }
+
+}
+console.log(linha)
+
+
+//15. Escreva um programa que gera e imprime os primeiros 10 números da sequência de Fibonacci utilizando um loop for.
+
+let termosDesejados = 10
+let inicial = 0
+let soma = 1
+let sequencia = `${inicial}, ${soma}`
+
+for (let i = 2; i < termosDesejados; i++){
+    let proximo = inicial + soma
+    sequencia += `, ${proximo}`
+    inicial = soma
+    soma = proximo
+    
+}
+console.log(sequencia)
